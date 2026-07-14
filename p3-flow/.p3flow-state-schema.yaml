@@ -1,0 +1,14 @@
+# Схема файла состояния Docs/.p3flow/state.yaml (справочно)
+# Файл создаётся scripts/init_repo.py и обновляется scripts/progress_tracker.py.
+
+methodology: string          # p3-express | micro-p3-express (позже: p1-express)
+project_name: string
+started_at: date             # ISO, YYYY-MM-DD
+current_group: string        # A..G — текущая группа активностей
+current_activity: string     # код активности: A05 (p3) / A5 (micro)
+completed_activities: [string]   # пройденные коды в порядке выполнения
+documents:                   # статус каждого управляющего документа
+  <doc-id>:
+    status: string           # not_started | in_progress | done
+    path: string             # путь относительно корня репозитория
+cycle_history: [string]      # завершённые циклы: month-2026-07, week-2026-07-14 …
