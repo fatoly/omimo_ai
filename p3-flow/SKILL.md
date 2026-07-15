@@ -145,7 +145,12 @@ python3 ~/.claude/skills/p3-flow/scripts/init_repo.py --methodology <p3-express|
 Материалы циклов складывай в `Docs/cycles/`:
 - P3.express: `cycles/month-YYYY-MM/` (шаблоны month-kickoff/month-closure)
   и `cycles/week-YYYY-MM-DD/` (шаблон week.md)
-- micro.P3.express: `cycles/week-YYYY-MM-DD/` (шаблоны week-closure/week-kickoff)
+- micro.P3.express: `cycles/week-YYYY-MM-DD/` с набором `agenda_wN.md`,
+  `todo_wN.md`, `transcript_wN.md`, `materials/`, `week-closure.md` + сквозной
+  `cycles/open-questions.md` — состав и правила см. в `references/weekly-cycle-ru.md`
+
+Не забывай отражать прогресс документов: `progress_tracker.py doc <имя> <статус>`
+(in_progress — при первом заполнении, done — когда все активности документа пройдены).
 
 Циклы замкнуты: трекер сам возвращает E4 → C1 (micro) и E03 → B01 (P3).
 Завершённый цикл фиксируй: `progress_tracker.py cycle week-YYYY-MM-DD`.
